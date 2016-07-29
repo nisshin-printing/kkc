@@ -1,0 +1,197 @@
+@charset "shift_jis";
+body   {
+	background-image : url(sp.gif);
+	text-align: center;
+	margin: 0;
+	font-family: "‚l‚r ‚oƒSƒVƒbƒN", Osaka, "ƒqƒ‰ƒMƒmŠpƒS Pro W3";
+	font-size: 12px;
+	line-height: 130%;
+}
+#container   { font-family: "‚l‚r ‚oƒSƒVƒbƒN", Osaka, "ƒqƒ‰ƒMƒmŠpƒS Pro W3";
+background-color: #fff;
+text-align: left;
+width: 732px;
+margin-right: auto;
+margin-left: auto;
+}
+
+#container:after {
+ content:"";
+ display:block;
+ clear:left;
+}
+
+#container #margin { padding-right: 6px; padding-left: 6px ;}
+#header {
+	background-image : url(top_03.gif);
+	background-repeat: repeat-x;
+	width: 720px;
+	height: 82px;
+	float: left;
+	text-align: center;
+}
+#pankuzu  {
+	background-color: #ecebeb;
+	float: none;
+	font-family: "‚l‚r ‚oƒSƒVƒbƒN", Osaka, "ƒqƒ‰ƒMƒmŠpƒS Pro W3";
+	font-size: 12px;
+	margin: 0px;
+	text-align: left;
+	padding: 3px 5px 3px 3px;
+	color: #666666;
+}
+#pankuzu a {
+	color: #006699;
+}
+
+#footer { width: 720px; height: 49px; clear: left ;}
+#navi { }
+#navi li   {
+	font-size: 10px;
+	list-style-image : url(top_21.gif);
+	margin: 5px 0;
+	color: #656363;
+	line-height: 130%;
+	font-family: "‚l‚r ‚oƒSƒVƒbƒN", Osaka, "ƒqƒ‰ƒMƒmŠpƒS Pro W3";
+}
+#navi a {
+	font-size: 12px;
+	color: #009FE8;
+	text-decoration: none;
+}
+
+#navi ul   { margin: 0 0 0 20px; padding: 0 ;}
+#schedule {
+	background-color: #fbf0c6;
+	margin: 9px;
+	padding: 5px;
+	text-align: left;
+	font-family: "‚l‚r ƒSƒVƒbƒN", "Osaka|“™•";
+}
+#main {
+	text-align: center;
+	font-size: 12px;
+	line-height: 130%;
+}
+#main h2 {
+	font-family: "‚l‚r ƒSƒVƒbƒN", "Osaka|“™•";
+	font-size: 14px;
+	background-image : url(top_03.gif);
+	background-position: bottom;
+	color: #4778C0;
+	padding: 3px;
+	text-align: left;
+	margin-top: 20px;
+	margin-right: 7px;
+	margin-bottom: 5px;
+	margin-left: 20px;
+	border: 1px outset #CCCCCC;
+}
+
+#main h1 {
+	font-family: "‚l‚r ‚oƒSƒVƒbƒN", Osaka, "ƒqƒ‰ƒMƒmŠpƒS Pro W3";
+	font-size: 16px;
+	height: 32px;
+	background-image : url(top_26.gif);
+	font-weight: bold;
+	margin-top: 25px;
+	margin-right: 0px;
+	margin-bottom: 15px;
+	margin-left: 9px;
+	color: #006600;
+	text-align: left;
+	background-repeat: no-repeat;
+	padding-top: 6px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 35px;
+}
+#main p {
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-bottom: 20px;
+	margin-left: 0px;
+	text-align: left;
+	padding-right: 30px;
+	padding-left: 30px;
+	font-family: "‚l‚r ƒSƒVƒbƒN", "Osaka|“™•";
+	line-height: 160%;
+	color: #666666;
+}
+#main #migi {
+	text-align: right;
+	margin: 30px;
+}
+
+
+#schedule2 {
+	background-color: #E8E8E8;
+	margin: 9px;
+	padding: 5px;
+	font-family: "‚l‚r ƒSƒVƒbƒN", "Osaka|“™•";
+	text-align: left;
+}
+#iventusr {
+	background-color: #FFFFFF;
+	margin: 9px;
+	padding: 5px;
+	font-family: "‚l‚r ‚oƒSƒVƒbƒN", Osaka, "ƒqƒ‰ƒMƒmŠpƒS Pro W3";
+	text-align: left;
+	line-height: 140%;
+}
+#iventusr img {
+	float: right;
+	margin-left: 10px;
+}
+#navi a:hover {
+	font-size: 12px;
+	color: #009FE8;
+	text-decoration: underline;
+}
+#main form td {
+
+	font-size: 12px;
+	color: #1D2087;
+}
+#main h3 {
+	font-family: "‚l‚r ƒSƒVƒbƒN", "Osaka|“™•";
+	font-size: 12px;
+	background-position: bottom;
+	color: #FF6600;
+	padding: 3px;
+	text-align: left;
+	margin-top: 8px;
+	margin-right: 7px;
+	margin-bottom: 5px;
+	margin-left: 20px;
+	border: 5px solid #F0F0F0;
+	width: 498px;
+	background-color: #F3F3F3;
+	font-weight: normal;
+	line-height: 140%;
+}
+#main #member td {
+	font-size: 12px;
+}
+#navi #mailmaga {
+	padding-right: 10px;
+	padding-left: 3px;
+	font-size: 10px;
+	color: #333333;
+}
+#mailmaga form {
+	margin-top: 3px;
+	margin-bottom: 3px;
+	font-size: 12px;
+	padding: 3px;
+	background-color: #FFFFF0;
+}
+
+#mailmaga h4 {
+	font-size: 12px;
+	background-color: #FF9900;
+	padding: 3px;
+	color: #FFFFFF;
+	margin-bottom: 5px;
+	border: 2px solid #C8C9C9;
+}

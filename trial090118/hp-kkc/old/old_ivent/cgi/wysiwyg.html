@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML><head>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<META http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>コメントの編集</title>
+<style type="text/css">
+<!--
+body {
+	text-align:center;
+	background-color:#eee;
+	color:#000;
+}
+
+a:link { color:#00f; }
+a:visited { color:#c0c; }
+a:active { color:#f00; }
+a:hover { color:#f00; }
+
+h1 {
+	font-size:120%;
+}
+.dblock {
+	margin:10px auto;
+	padding:8px;
+	width:600px;
+	border:outset 3px #ccc;
+	background-color:#ccc;
+	text-align:center;
+}
+.tarea { /*　編集エリアの設定 SKINの記事表示部分に合わせて下さい */
+	font-size:80%;
+	background-color:#fff;
+	color:#000;
+	font-family:monospace;
+
+	border:inset 3px #ccc;
+	text-align:left;
+	margin:6px auto;
+	padding:1px;
+	width:90%;
+	height:300px;
+	overflow:auto;
+}
+.desc {
+	width:580px;
+	text-align:left;
+	margin:0.5em auto;
+}
+
+.desc li{
+	width:580px;
+	text-align:left;
+	margin:0.5em 0;
+	font-size:90%;
+}
+.copyright {
+	text-align:center;
+	font-size:80%;
+	font-family:monospace;
+}
+-->
+</style>
+<script type="text/javascript">
+
+/* shiftを伴わない改行を無効化
+function RTN_key(Event) {
+	var e=(event.which)?event.which:event.keyCode;
+	if(e==13 && event.shiftKey==false )return false;
+}
+document.onkeydown = RTN_key;
+*/
+
+var Obj;
+function Init() {
+	for (i=0; i<document.all.length; i++) {
+		document.all(i).unselectable = "on";
+	}
+	(Obj = document.getElementById('EditableDiv')).unselectable = "off";
+	document.F.T.unselectable = "off";
+
+	var WK_STR = opener.document.FM.comment.value;
+	var WK_Strings = WK_STR.split('\r');
+	document.F.T.value = WK_Strings.join('<br>');
+	Obj.innerHTML = document.F.T.value;
+}
+function to_Source(V_mode){
+	Wobj = document.getElementById('bt_W');
+	Sobj = document.getElementById('bt_S');
+	if(V_mode == 'W' && Obj.style.display == 'none') {
+		Obj.innerHTML = document.F.T.value;
+		Obj.style.display = '';
+		document.F.T.style.display = 'none';
+		Wobj.style.borderStyle = 'inset';
+		Sobj.style.borderStyle = '';
+		Sobj.style.borderColor = '';
+		Obj.focus();
+		(document.getElementById('W_area')).style.display = '';
+	} else if(V_mode == 'S' && Obj.style.display == ''){
+		document.F.T.value = Obj.innerHTML;
+		Obj.style.display = 'none';
+		document.F.T.style.display = '';
+		Sobj.style.borderStyle = 'inset';
+		Wobj.style.borderStyle = '';
+		Wobj.style.borderColor = '';
+		document.F.T.focus();
+		(document.getElementById('W_area')).style.display = 'none';
+	}
+}
+function reg_check() {
+	to_Source('W');
+	if( confirm('通常編集画面に戻りますがよろしいですか？\nＯＫを押すと文字を変化させる英数字が自動的に本文に挿入されます\n※挿入された英数字は消さないで下さい！') ) {
+		document.F.T.value = Obj.innerHTML;
+		var WK_Strings = document.F.T.value;
+		WK_Strings = WK_Strings.split('\r\n');
+		WK_Strings = WK_Strings.join('');
+		WK_Strings = WK_Strings.split('<BR>');
+		WK_Strings = WK_Strings.join('\r\n');
+		opener.document.FM.comment.value = WK_Strings;
+		window.close();
+		return false;
+	} else {
+		return false;
+	}
+}
+
+function make_image() {
+	var Sel = document.selection;
+	if(Sel == '') retrun;
+	result = showModalDialog("wysiwyg_img.html",'',"dialogWidth:230px;dialogHeight:260px;center:yes");
+//	result = prompt('挿入するイメージのURL','');
+	if(result == ''||result == null) return;
+	var Rng = Sel.createRange();
+	if(Rng == '') retrun;
+	Rng.pasteHTML('<img ' + result + '>');
+}
+
+</script>
+
+</head>
+<body onload="Init();to_Source('W')">
+<h1>文字の自由編集ページ</h1>
+<TABLE border="0" cellpadding="5" cellspacing="1" bgcolor="#666666">
+  <TBODY>
+    <TR>
+      <TD bgcolor="#ffcd37" align="center">＜使い方＞</TD>
+    </TR>
+    <TR>
+      <TD bgcolor="#ffffff">１．文字を装飾したい部分をマウスやキーボードで選びます<BR>
+      (例)<IMG src="rei.gif" width="192" height="58" border="0">…文字を範囲指定します<BR>
+      <BR>
+      ２．&quot;太字&quot;や&quot;斜体&quot;、文字色などのボタンを押して下さい<BR>
+      ３．編集が終わったら、&quot;文字編集完了！&quot;ボタンを押して下さい<BR>
+      <BR>
+      <FONT color="#ff0000">※この作業ではホームページが壊れることがないので<BR>
+      気楽に文字編集をお楽しみ下さい！</FONT></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<form name="F" class="dblock" onsubmit="return reg_check()">
+<textarea name="T" class="tarea" style="display:none;"></textarea>
+<DIV id="EditableDiv" class="tarea" CONTENTEDITABLE style="display:none;"></DIV>
+<FONT size="-1">改行はSHIFT＋ENTERで行って下さい<BR>
+段落を変える場合はENTERのみ入力して下さい</FONT><BR>
+<BR>
+<table>
+<tbody>
+    <TR>
+      <TD align="right">文字装飾：</TD>
+      <TD><span id="W_area">
+<button onclick="document.execCommand('Bold');" title="文字を太字にします"><b>太字</b></button>
+<button onclick="document.execCommand('Italic');" title="文字を斜体にします"><I>斜体</I> </button>
+<button onclick="document.execCommand('Underline');" title="文字に下線をつけます"><U>下線</U></button>
+      </span></TD>
+    </TR>
+    <TR>
+      <TD align="right">文字位置：</TD>
+      <TD><span id="W_area">
+<button onclick="document.execCommand('JustifyLeft');" title="段落の左寄せ">左揃え</button>
+<button onclick="document.execCommand('JustifyCenter');" title="段落のセンタリング">中央揃え</button>
+<button onclick="document.execCommand('JustifyRight');" title="段落の右寄せ">右揃え</button>
+</span><span id="W_area"></span></TD>
+    </TR>
+    <tr>
+      <TD align="right">文字色：</TD>
+      <td><span id="W_area">
+      <button onclick="document.execCommand('ForeColor',true,'#000000');" title="文字色：黒"><font color="#000000">■</font></button>
+      <button onclick="document.execCommand('ForeColor',true,'#000000');" title="文字色：黒"><FONT color="#555555">■</FONT></button>
+      <button onclick="document.execCommand('ForeColor',true,'#ffffff');" title="文字色：白"><font color="#ffffff">■</font></button>
+      <button onclick="document.execCommand('ForeColor',true,'#804040');" title="文字色：緑"><FONT color="#804040">■</FONT></button>
+      <button onclick="document.execCommand('ForeColor',true,'#cc0000');" title="文字色：黒"><FONT color="#cc0000">■</FONT></button>
+      <button onclick="document.execCommand('ForeColor',true,'#ff0000');" title="文字色：赤"><font color="#ff0000">■</font></button>
+      <button onclick="document.execCommand('ForeColor',true,'#ff5353');" title="文字色：赤"><FONT color="#ff5353">■</FONT></button>
+      <button onclick="document.execCommand('ForeColor',true,'#ff8409');" title="文字色：青"><FONT color="#ff7709">■</FONT></button>
+      <button onclick="document.execCommand('ForeColor',true,'#ffcc00');" title="文字色：オレンジ"><FONT color="#feb301">■</FONT></button>
+      <button onclick="document.execCommand('ForeColor',true,'#ff66cc');" title="文字色：桃色"><FONT color="#417e44">■</FONT></button>
+      </span></td></tr>
+<tr>
+      <TD align="right"></TD>
+      <td><span id="W_area">
+      <button onclick="document.execCommand('ForeColor',true,'#008080');" title="文字色：青緑"><FONT color="#008080">■</FONT></button>
+      <button onclick="document.execCommand('ForeColor',true,'#009900');" title="文字色：紫"><FONT color="#009900">■</FONT></button>
+      <button onclick="document.execCommand('ForeColor',true,'#000099');" title="文字色：桃色"><FONT color="#000099">■</FONT></button>
+      <button onclick="document.execCommand('ForeColor',true,'#0066cc');" title="文字色：青緑"><font color="#0066cc">■</font></button>
+      <button onclick="document.execCommand('ForeColor',true,'#0000ff');" title="文字色：青"><font color="#0000ff">■</font></button>
+      <button onclick="document.execCommand('ForeColor',true,'#6868b5');" title="文字色：オレンジ"><FONT color="#6868b5">■</FONT></button>
+      <button onclick="document.execCommand('ForeColor',true,'#983f9a');" title="文字色：桃色"><FONT color="#983f9a">■</FONT></button>
+      <button onclick="document.execCommand('ForeColor',true,'#d1386d');" title="文字色：桃色"><FONT color="#d1386d">■</FONT></button>
+      <button onclick="document.execCommand('ForeColor',true,'#ff66cc');" title="文字色：桃色"><font color="#ff66cc">■</font></button>
+      <button onclick="document.execCommand('ForeColor',true,'#ff0080');" title="文字色：白"><FONT color="#ff0080">■</FONT></button>
+      </span></td>
+    </tr>
+    <TR>
+      <TD align="right"><span id="W_area">文字サイズ：</span></TD>
+      <TD><span id="W_area">
+<button onclick="document.execCommand('FontSize',true,'1');" title="文字サイズ：1">１</button>
+<button onclick="document.execCommand('FontSize',true,'2');" title="文字サイズ：2">[２]</button>
+<button onclick="document.execCommand('FontSize',true,'3');" title="文字サイズ：3:標準">３</button>
+<button onclick="document.execCommand('FontSize',true,'4');" title="文字サイズ：4">４</button>
+<button onclick="document.execCommand('FontSize',true,'5');" title="文字サイズ：5">５</button>
+<button onclick="document.execCommand('FontSize',true,'6');" title="文字サイズ：6">６</button>
+<button onclick="document.execCommand('FontSize',true,'7');" title="文字サイズ：7">７</button>
+      </span></TD>
+    </TR>
+    <TR>
+      <TD align="right">その他：</TD>
+      <TD><span id="W_area">
+      <button onclick="document.execCommand('InsertHorizontalRule');" title="水平線の挿入">ライン（線分）</button>
+　
+<button onclick="document.execCommand('CreateLink');" title="ハイパーリンクの設定">リンク</button>
+</span>
+</TD>
+    </TR>
+  </tbody>
+</table>
+<hr width="90%">
+<input type="submit" value="文字編集完了！" title="編集結果を投稿フォームに設定"></form>
+ <p class="desc"><strong>※ 文字自由編集の注意　</strong></p>
+ <ul class="desc">
+	<li>各編集ボタンの上でマウスカーソルを静止させると簡単な説明が表示されます。</li>
+  <li>この編集画面は<strong>Windows版 InternetExplorer 5.5以上</strong>でなければ正常に動作しません。</li>
+</ul>
+</body>
+</HTML>

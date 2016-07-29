@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="pragma" content="no-cache">
+<META http-equiv="Content-Style-Type" content="text/css">
+<title>General BBS</title>
+<style type = "text/css">
+BODY,TD,TH{font-size: 10pt;}
+.input 	{border-color:a0a0ff;
+		border-style:dotted dotted dotted dotted;
+		}
+.button	{border-color:6060ff;
+		border-style:dotted dotted dotted dotted;
+		background-color: b0b0ff;
+		color: 0000ff;
+		}
+</style>
+
+</head>
+<body text=#092875 bgcolor=#ffffff link=303060 vlink=303060 alink=8080cf>
+<div align=center><font color="6060ff" size=6>General BBS</font></div>
+<FORM method="post" action="gnbbs.cgi">
+<TABLE border="0" align="center" cellspacing="0">
+<tr bgcolor=#f0f0ff><td align="right">NAME : <input type="text" class="input" name="name" size="20" value="金森">&nbsp;</td></tr>
+<tr bgcolor=#e8e8ff><td align="right">E-Mail : <input type="text" class="input" name="email" size="20" value="">&nbsp;</td></tr>
+<tr bgcolor=#e0e0ff><td align="right">URL : <input type="text" class="input" name="url" size="20" value="">&nbsp;</td></tr>
+<tr bgcolor=#d8d8ff>
+      <TD align="left" bgcolor="#a3c4e4">&nbsp;Subject : <input type="text" class="input" name="subject" size="30">&nbsp;</TD>
+    </tr>
+<tr bgcolor=#d0d0ff>
+      <TD align="left" bgcolor="#8cb5dd">&nbsp;Comment : <br>
+&nbsp;<textarea name="msg" class="input" cols="50" rows="6"></textarea>&nbsp;</TD>
+    </tr>
+<tr bgcolor=#c8c8ff>
+      <TD align="left" bgcolor="#71a3d5">&nbsp;Delete Key : <input type="password" class="input" name="delkey" size="10" value="kmy"></TD>
+    </tr>
+<tr bgcolor=#c8c8ff>
+      <TD align="center" bgcolor="#71a3d5"><input type="submit" class="button" value="Submit"><input type="reset" class="button" value="Reset"></TD>
+    </tr>
+</TABLE>
+<input type="hidden" name="act" value="write">
+<input type="hidden" name="page" value="0">
+</FORM>
+<div align="center"><a href="http://dream.lib.net/room/">&lt;&lt;Back To Home</a></div>
+<br><br><table border=0 width="80%" align=center>
+<tr><td bgcolor="#f0f0ff" align="left">
+&nbsp;<b>[1]テスト</b>
+</td></tr>
+<tr><td bgcolor="#e0e0ff" align="right">
+<b>金森</b>&nbsp;
+</td></tr>
+<tr><td bgcolor="#d0d0ff" align="right">
+7/3 15:09&nbsp;</td></tr>
+<tr><td bgcolor="#c0c0ff" align="center">
+<table width="98%">
+<tr><td align="left">
+テスト
+<!--61.126.144.49/p1048-ipad01niho.hiroshima.ocn.ne.jp-->
+
+</td></tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table border=0 align=center><tr></tr>
+</table>
+<FORM method="post" action="gnbbs.cgi"></FORM>
+<table align=center>
+  <tr><td bgcolor=#f0f0ff align=center>
+記事番号：<input type="text" class="input" name="chdel" size=4>
+削除キー：<input type="password" class="input" name="pass" size=9>
+</td>
+</tr>
+<tr>
+<td bgcolor=#e0e0ff align=center>
+<input type="submit" class="button" value="記事削除">
+<input type="hidden" name="act" value="delete">
+</td>
+</tr>
+  
+</table>
+<br><br>
+<div align=center><a href="http://dream.lib.net/room/" target="_blank">General BBS by The Room</a></div>
+<br></BODY>
+</HTML>

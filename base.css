@@ -1,0 +1,525 @@
+@charset "shift_jis";
+
+/* -------------------------------------------------------------
+
+[1] レイアウトに関する指定
+[2] ヘッダーブロック内に関する指定
+[3] コンテンツブロック内に関する指定
+[4] フッターブロック内に関する指定
+ -------------------------------------------------------------
+/*
+
+/* 一括で全ての要素の余白をゼロに指定 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 全体的なリンク */
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: underline; 
+}
+
+a:link {
+	color: #00f; 
+}
+
+a:visited {
+	color: #90f; 
+}
+
+a:hover {
+	color: #f00; 
+}
+
+a:active {
+	color: #f00; 
+}
+
+/* -------------------------------------------------------------
+   [1] レイアウトに関する指定 */
+body {
+  font-size: 85%;
+  text-align: center;
+  font-family: "メイリオ", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/*-- 全体を囲んでいます --*/
+#wrapper {
+  text-align: left;
+  width: 800px;
+  margin: 0 auto;
+  border-left: 1px solid #000066;
+  border-right: 1px solid #000066;
+}
+
+/*-- ヘッダー部分 --*/
+#header {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  background: url(img/top1.jpg) no-repeat 0 0;
+}
+
+/*-- コンテンツ部分 800px --*/
+#contents {
+	padding: 20px 0px; 
+}
+
+/*-- ページ内見出し部分用 --*/
+#contents6 {
+  padding: 20px 0px 5px 10px;
+  float: left;
+  width: 96%;
+  overflow: auto;
+}
+
+#table1 {
+  padding : 0px;
+  float: left;
+  width: 720px;
+  overflow: auto;
+  border-width : 2px;
+  border-style : solid;
+  border-color : #000066;
+  margin-top : 10px;
+  margin-left : 40px;
+  margin-right : 40px;
+  margin-bottom : 10px;
+}
+#table2 {
+  padding : 5px;
+  float: left;
+  width: 348px;
+  overflow: auto;
+  border-width : 1px;
+  border-style : solid;
+  border-color : #000066;
+}
+#table3 {
+  padding : 5px;
+  float: left;
+  width: 168px;
+  overflow: auto;
+  border-width : 1px;
+  border-style : solid;
+  border-color : #000066;
+}
+#table4 {
+  padding : 5px;
+  float: left;
+  width: 228px;
+  overflow: auto;
+  border-width : 1px;
+  border-style : solid;
+  border-color : #000066;
+}
+
+#table5 {
+  padding : 5px;
+  float: left;
+  width: 468px;
+  overflow: auto;
+  border-width : 1px;
+  border-style : solid;
+  border-color : #000066;
+}
+#table6 {
+  padding : 5px;
+  float: left;
+  width: 88px;
+  overflow: auto;
+  border-width : 1px;
+  border-style : solid;
+  border-color : #000066;
+}
+
+#table7 {
+  padding : 5px;
+  float: left;
+  width: 128px;
+  overflow: auto;
+  border-width : 1px;
+  border-style : solid;
+  border-color : #000066;
+}
+#table8 {
+  padding : 5px;
+  float: left;
+  width: 568px;
+  overflow: auto;
+  border-width : 1px;
+  border-style : solid;
+  border-color : #000066;
+}
+#table9 {
+  padding : 5px;
+  float: left;
+  width: 720px;
+  overflow: auto;
+  border-width : 2px;
+  border-style : solid;
+  border-color : #000066;
+  margin-top : 10px;
+  margin-left : 40px;
+  margin-right : 40px;
+  margin-bottom : 10px;
+}
+/*-- インデックス右コンテンツ --*/
+#table10 {
+  padding : 5px;
+  float: left;
+  width: 248px;
+  overflow: auto;
+  border-width : 2px;
+  border-style : solid;
+  border-color : #000066;
+  margin-top : 10px;
+  margin-left : 10px;
+  margin-right : 10px;
+  margin-bottom : 10px;
+}
+#table11 {
+  padding : 5px;
+  float: left;
+  width: 108px;
+  overflow: auto;
+  border-width : 1px;
+  border-style : solid;
+  border-color : #000066;
+}
+#table01 {
+  padding : 0px;
+  float: left;
+  width: 720px;
+  overflow: auto;
+  margin-top : 10px;
+  margin-left : 40px;
+  margin-right : 40px;
+  margin-bottom : 10px;
+}
+#table02 {
+  padding : 5px;
+  float: left;
+  width: 348px;
+  overflow: auto;
+}
+#table03 {
+  padding : 5px;
+  float: left;
+  width: 168px;
+  overflow: auto;
+}
+#table04 {
+  padding : 5px;
+  float: left;
+  width: 228px;
+  overflow: auto;
+}
+
+#table05 {
+  padding : 5px;
+  float: left;
+  width: 468px;
+  overflow: auto;
+}
+#table06 {
+  padding : 5px;
+  float: left;
+  width: 88px;
+  overflow: auto;
+}
+#table07 {
+  padding : 5px;
+  float: left;
+  width: 128px;
+  overflow: auto;
+}
+#table08 {
+  padding : 5px;
+  float: left;
+  width: 568px;
+  overflow: auto;
+}
+#table09 {
+  padding : 5px;
+  float: left;
+  width: 720px;
+  overflow: auto;
+  margin-top : 10px;
+  margin-left : 40px;
+  margin-right : 40px;
+  margin-bottom : 10px;
+}
+/*-- インデックス左コンテンツ --*/
+#table010 {
+  padding : 10px;
+  float: left;
+  width: 488px;
+  overflow: auto;
+}
+
+/*-- フッター部分 --*/
+#footer {
+  width: 802px;
+  margin: 0 auto;
+  padding: 0.5em 0 0.5em;
+  background-color: #000066;
+}
+
+/* -------------------------------------------------------------
+   [2] ヘッダーブロック内に関する指定 */
+
+/* 見出し */
+
+h1 {
+  font-size: 100%;
+  font-weight: normal;
+  text-align: right;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  color: #000066;
+}
+
+/* サイトタイトル */
+.logo {
+  font-size: 160%;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.logo a {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: #f00;
+  text-decoration: none;
+}
+
+/* 概要 */
+.description {
+  line-height: 1.5em;
+  position: absolute;
+  bottom: 45px;
+  left: 30px;
+  color: #000;
+}
+
+/*---------------------------------------グローバルナビ部分*/
+#globalnavi {
+  font-size: 95%;
+  list-style-type: none;
+  width: 800px;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#globalnavi li {
+  width: 200px;
+  float: left;
+}
+
+#globalnavi li a {
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
+  height: 28px;
+  display: block;
+  padding-top: 12px;
+  background-image: url(img/topnavi.jpg);
+  background-repeat: no-repeat;
+  color: #ffffff
+;
+}
+
+#category01 a {
+	background-position: 0 0; 
+}
+
+#category02 a {
+	background-position: -200px 0; 
+}
+
+#category03 a {
+	background-position: -400px 0; 
+}
+
+#category04 a {
+	background-position: -600px 0; 
+}
+
+#globalnavi li a:hover {
+  text-decoration: none;
+  background-image: url(img/topnavi.jpg);
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+#category01 a:hover {
+	background-position: 0 -40px; 
+}
+
+#category02 a:hover {
+	background-position: -200px -40px; 
+}
+
+#category03 a:hover {
+	background-position: -400px -40px; 
+}
+
+#category04 a:hover {
+	background-position: -600px -40px; 
+}
+
+/*--サブメニュー部分--*/
+
+#globalnavi ul {
+  list-style-type: none;
+  width: 200px;
+  height: auto;
+  position: static;
+}
+
+#globalnavi ul li {
+  width: 200px;
+  float: none;
+}
+
+#globalnavi ul li a {
+  text-align: left;
+  text-decoration: none;
+  width: 190px;
+  height: auto;
+  display: block;
+  padding: 4px;
+  border: 1px outset #ccc;
+  background-image: none;
+  background-color: #ccccff;
+  color: #000;
+}
+
+#globalnavi ul li a:hover {
+  text-decoration: none;
+  border: 1px outset #666;
+  background-image: none;
+  background-color: #000066;
+  color: #fff;
+}
+
+#globalnavi .menu ul {
+	display: none; 
+}
+
+#globalnavi .menuOn ul {
+	display: block; 
+}
+
+/* -------------------------------------------------------------
+   [3] コンテンツブロック内に関する指定 */
+
+/* 見出し */
+h2 {
+  font-size: 140%;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+  padding: 6px 0 1px;
+  color: #000066;
+  border-top: 2px solid #000066;
+  border-bottom: 1px solid #6666ff;
+}
+
+h3 {
+  font-size: 120%;
+  font-weight: normal;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 5px 0 1px;
+  color: #000066;
+  border-top: 2px solid #000066;
+  border-bottom: 1px solid #6666ff;
+}
+h4 {
+  font-size: 100%;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+  padding: 4px 0 1px;
+}
+h5 {
+  font-size: 90%;
+  font-weight: normal;
+  margin-bottom: 0em;
+  padding: 4px 0 1px;
+}
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+  padding: 4px 0 1px;
+  color: #000066;
+  border-left: 2px solid #000066;
+  border-bottom: 1px solid #6666ff;
+}
+.table1{
+  width : 240px;
+  border-collapse : collapse;
+  border-spacing : 0px;
+  table-layout : fixed;
+  empty-cells : hide;
+  margin-top : 5px;
+  margin-left : 5px;
+  margin-right : 5px;
+  margin-bottom : 5px;
+}
+
+.table2{
+  width : 450px;
+  border-collapse : collapse;
+  border-spacing : 0px;
+  table-layout : fixed;
+  empty-cells : hide;
+  margin-top : 5px;
+  margin-left : 5px;
+  margin-right : 5px;
+  margin-bottom : 5px;
+}
+
+
+
+
+
+
+/* 文字 */
+#contents p {
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+/* -------------------------------------------------------------
+   [5] フッターブロック内に関する指定 */
+
+#footer p {
+  text-align: center;
+  color: #fff;
+}
+
+/* ------------------------------------------------------------- */
+
+#clear {
+  font-size: 80%;
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  text-align: right;
+  clear: both;
+}

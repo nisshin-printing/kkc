@@ -1,0 +1,95 @@
+@charset "shift_jis";
+body   {
+	background-image: url("images/sp.gif");
+	text-align: center;
+	margin: 0;
+	font-family: "‚l‚r ‚oƒSƒVƒbƒN", Osaka, "ƒqƒ‰ƒMƒmŠpƒS Pro W3";
+	font-size: 12px;
+	line-height: 130%;
+}
+#container   { font-family: "‚l‚r ‚oƒSƒVƒbƒN", Osaka, "ƒqƒ‰ƒMƒmŠpƒS Pro W3"; background-color: #fff; text-align: center; width: 732px }
+#container #margin { padding-right: 6px; padding-left: 6px }
+#header { background-image: url("images/top_03.gif"); background-repeat: repeat-x; width: 720px; height: 82px; float: left }
+#pankuzu  {
+	background-color: #ecebeb;
+	width: 720px;
+	float: left;
+	font-family: "‚l‚r ‚oƒSƒVƒbƒN", Osaka, "ƒqƒ‰ƒMƒmŠpƒS Pro W3";
+	font-size: 12px;
+	margin: 0px;
+	padding-top: 3px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	text-align: left;
+}
+#footer { width: 720px; height: 49px; clear: left }
+#navi { }
+#navi li   {
+	font-size: 10px;
+	list-style-image: url("images/top_21.gif");
+	margin: 5px 0;
+	color: #656363;
+	line-height: 130%;
+	font-family: "‚l‚r ‚oƒSƒVƒbƒN", Osaka, "ƒqƒ‰ƒMƒmŠpƒS Pro W3";
+}
+#navi a {
+	font-size: 12px;
+	color: #009FE8;
+	text-decoration: none;
+}
+
+#navi ul   { margin: 0 0 0 20px; padding: 0 }
+#schedule {
+	background-color: #fbf0c6;
+	margin: 9px;
+	padding: 5px;
+	text-align: left;
+	font-family: "‚l‚r ƒSƒVƒbƒN", "Osaka|“™•";
+}
+#main {
+	text-align: center;
+	font-size: 12px;
+	line-height: 130%;
+}
+#main h1 {
+	background-image: url(images/top_26.gif);
+	height: 32px;
+	width: 537px;
+	font-family: "‚l‚r ‚oƒSƒVƒbƒN", Osaka, "ƒqƒ‰ƒMƒmŠpƒS Pro W3";
+	font-size: 16px;
+	font-weight: bold;
+	margin: 7px 0px 5px;
+	padding: 8px 3px 3px 40px;
+	color: #006600;
+	text-align: left;
+}
+#schedule2 {
+	background-color: #E8E8E8;
+	margin: 9px;
+	padding: 5px;
+	font-family: "‚l‚r ƒSƒVƒbƒN", "Osaka|“™•";
+	text-align: left;
+}
+#iventusr {
+	background-color: #FFFFFF;
+	margin: 9px;
+	padding: 5px;
+	font-family: "‚l‚r ‚oƒSƒVƒbƒN", Osaka, "ƒqƒ‰ƒMƒmŠpƒS Pro W3";
+	text-align: left;
+	line-height: 140%;
+}
+#iventusr img {
+	float: right;
+	margin-left: 10px;
+}
+#navi a:hover {
+	font-size: 12px;
+	color: #009FE8;
+	text-decoration: underline;
+}
+#main form td {
+
+	font-size: 12px;
+	color: #1D2087;
+}

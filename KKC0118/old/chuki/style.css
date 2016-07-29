@@ -1,0 +1,34 @@
+		TD {font-size:14px; line-height:18px;}
+		.bold{font-weight : bold;}
+		.10px {font-size:10px; line-height:14px;}
+		.12px {font-size:12px; line-height:14px;}
+		.14px {font-size:14px; line-height:18px;}
+		.16px {font-size:16px; line-height:18px;}
+		.18px {font-size:18px; line-height:20px;}
+
+A.sublink{
+  font-size : 12px;
+  color : #000099;
+  text-decoration : none;
+}
+A:HOVER.sublink{
+  font-size : 12px;
+  color : #FFFFFF;
+  background-color : #000099;
+  text-decoration : none;
+}
+		A.bt {}
+		A.bt:link { color: #ffffff ;}
+		A.bt:visited { color: #ffffff ;}
+		A.bt:active { color: yellow ;}
+		A.bt:hover { color: aqua ;}
+		A.gt {}
+		A.gt:link { color: #ffffff ;}
+		A.gt:visited { color: #ffffff ;}
+		A.gt:active { color: yellow ;}
+		A.gt:hover { color: yellow ;}
+		A.ctxt:link { color: yellow ;}
+		A.ctxt:visited { color: yellow ;}
+		A.ctxt:active { color: yellow ;}
+		A.ctxt:hover { color: aqua ;}
+.awhite { color: white }
