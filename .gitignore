@@ -1,4 +1,14 @@
 .git
-node_modules
-原稿
+mode_modules
+site/原稿
 *.zip
+
+.DS_Store
+.bundle
+.idea/
+.vagrant
+Movefile
+vendor
+www/wordpress/*
+www/wordpress/wp-content/*
+!www/wordpress/wp-content/themes/kkc/
