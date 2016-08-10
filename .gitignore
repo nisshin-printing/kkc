@@ -9,6 +9,13 @@ site/原稿
 .vagrant
 Movefile
 vendor
+LICENSE
+Vagrantfile
+provision
+
 www/wordpress/*
 www/wordpress/wp-content/*
 !www/wordpress/wp-content/themes/kkc/
+www/wordpress/wp-content/themes/kkc/site.yml
+www/wordpress/wp-content/themes/kkc/gulpfile.js
+www/wordpress/wp-content/themes/kkc/package.json
